@@ -3,4 +3,7 @@
     <string name="nextImageButton">Next</string>
     <string name="editTitle">Title</string>
     <string name="editDescription">Description</string>
+    <string name="addPlant">Add</string>
+    <string name="addRandom">Add Random</string>
+    <string name="menu">Menu</string>
 </resources>
