@@ -6,8 +6,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.view.GravityCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.plantshandbook.databinding.ActivityMainBinding
@@ -32,8 +34,18 @@ class MainActivity : AppCompatActivity() {
         binding.bottomNav.setOnItemSelectedListener {
             when(it.itemId) {
                 R.id.add -> openAddActivity()
+                R.id.menu -> binding.drawer.openDrawer(GravityCompat.START)
             }
             return@setOnItemSelectedListener true
+        }
+
+        binding.apply {
+            navView.setNavigationItemSelectedListener {
+                when(it.itemId) {
+                    R.id.item1 -> Toast.makeText(this@MainActivity, R.string.sideMenuText, Toast.LENGTH_LONG).show()
+                }
+                true
+            }
         }
     }
 
@@ -51,6 +63,7 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if(item.itemId == R.id.add) {
             openAddActivity()
+            //openAddActivity()
         }
         return true
     }

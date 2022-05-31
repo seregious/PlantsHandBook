@@ -6,4 +6,8 @@
     <string name="addPlant">Add</string>
     <string name="addRandom">Add Random</string>
     <string name="menu">Menu</string>
+    <string name="sideMenu">Here is side menu</string>
+    <string name="closeSideMenu">Close</string>
+    <string name="sideMenuText">Very interesting text</string>
+    <string name="headerTitle">Here is your minion app</string>
 </resources>
